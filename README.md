@@ -1,2 +1,3 @@
-# brute
-Automated system observation
+# Brute
+
+Automated system trials

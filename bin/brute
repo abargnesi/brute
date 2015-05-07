@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'brute'
+
+cmd = Brute::Command.new
+
+result = cmd.run_command
+while result[:exit_code].zero?
+  cmd.mutate
+  result = cmd.run_command
+end
+
+puts "Exited #{result[:exit_code]}"
+puts result[:output]
